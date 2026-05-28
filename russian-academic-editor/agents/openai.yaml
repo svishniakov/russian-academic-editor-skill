@@ -1,0 +1,4 @@
+interface:
+  display_name: "Russian Academic Editor"
+  short_description: "Редактирует русский академический текст"
+  default_prompt: "Use $russian-academic-editor to polish this Russian academic paragraph while preserving meaning, terminology, and citations."
