@@ -1,8 +1,8 @@
 # Russian Academic Editor Skill
 
-Скилл для Codex и совместимых agent-skill рантаймов. Помогает редактировать русскоязычный академический текст: делает формулировки яснее, убирает канцелярит и шаблонность, сохраняет смысл, термины, цифры и ссылки.
+Скилл для Codex и совместимых agent-skill рантаймов. Он помогает редактировать русскоязычный академический текст: уточняет формулировки, убирает канцелярит и шаблонность, сохраняет смысл, термины, цифры и ссылки.
 
-Скилл не предназначен для обхода антиплагиата, AI-проверок или авторских проверок. Вместо этого он задаёт безопасный маршрут: добросовестное академическое редактирование, аккуратный пересказ, проверка ссылочной честности.
+Скилл не предназначен для обхода антиплагиата, AI-проверок или авторских проверок. Его задача другая: добросовестное академическое редактирование, аккуратный пересказ и проверка ссылочной честности.
 
 ## Что внутри
 
@@ -44,23 +44,9 @@ russian-academic-editor/agents/openai.yaml
 - Не придумывает источники, цитаты, выводы или результаты исследования.
 - Не удаляет ссылки ради «уникальности».
 
-## Установка
+## Ask your agent to install
 
-Вариант с symlink:
-
-```bash
-ln -s /Users/ucnlejumper/Sites/russian-academic-editor-skill/russian-academic-editor \
-  /Users/ucnlejumper/.codex/skills/russian-academic-editor
-```
-
-Вариант с копированием:
-
-```bash
-cp -R /Users/ucnlejumper/Sites/russian-academic-editor-skill/russian-academic-editor \
-  /Users/ucnlejumper/.codex/skills/russian-academic-editor
-```
-
-После установки перезапусти Codex-сессию, если skill list не обновился автоматически.
+Copy the repo link and ask your agent to install it globally.
 
 ## Пример вызова
 
@@ -82,22 +68,15 @@ Use $russian-academic-editor to polish this Russian academic paragraph while pre
 - Формулировка стала короче и спокойнее.
 ```
 
-## Проверка
-
-Валидировать структуру skill:
-
-```bash
-python3 /Users/ucnlejumper/.codex/skills/.system/skill-creator/scripts/quick_validate.py \
-  /Users/ucnlejumper/Sites/russian-academic-editor-skill/russian-academic-editor
-```
-
-Ожидаемый результат:
+## Проверка структуры
 
 ```text
-Skill is valid!
+russian-academic-editor/
+├── SKILL.md
+└── agents/
+    └── openai.yaml
 ```
 
 ## Принцип
 
 Этот repo фиксирует не «обход проверки», а редакторскую дисциплину: текст должен быть авторским, точным, понятным и корректно ссылаться на источники.
-
